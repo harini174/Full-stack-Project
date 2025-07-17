@@ -1,6 +1,18 @@
-import { Geist_Sans, Geist_Mono } from "geist/font";
+import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import SessionWrapper from "@/component/SessionWrapper";
+
+
+
+const geistSans = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const geistMono = Roboto_Mono({
+  variable: "--font-roboto-mono",
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -9,8 +21,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${Geist_Sans.variable} ${Geist_Mono.variable}`}>
-      <body>
+    <html lang="en">
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <SessionWrapper>
           {children}
         </SessionWrapper>
