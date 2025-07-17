@@ -2,8 +2,6 @@ import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import SessionWrapper from "@/component/SessionWrapper";
 
-
-
 const geistSans = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
